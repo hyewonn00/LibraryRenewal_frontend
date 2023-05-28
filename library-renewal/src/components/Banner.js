@@ -14,7 +14,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
   const period = 2000;
 
   useEffect(() => {
@@ -57,19 +57,19 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h1>{`환영합니다!`} </h1>
-                <h1>{`무엇이든 검색하세요.`} </h1>
-                <SearchBar/>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h1>{`환영합니다!`} </h1>
+                  <h1>{`무엇이든 검색하세요.`} </h1>
+                  <SearchBar />
                   <button onClick={() => console.log('Show Books')}>Show Books <ArrowRightCircle size={25} /></button>
-              </div>}
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg3} alt="Header-Img"/>
+                  <img src={headerImg3} alt="Header-Img" />
                 </div>}
             </TrackVisibility>
           </Col>
