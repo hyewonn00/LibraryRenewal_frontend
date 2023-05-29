@@ -205,7 +205,6 @@ function IndexPage() {
 
   return (
     <Container>
-
       <div className='container'>
         <div className="guide">
           <div className="space-for-nav" style={{ height: "4rem" }}></div>
@@ -459,18 +458,13 @@ function IndexPage() {
           id="marker"
           style={{
             display: markerPosition.display,
-            width: '20px',
+            width: '25px',
             position: 'absolute',
-            top: markerPosition.top,
-            left: markerPosition.left,
+            top: markerPosition.top, //120 이동
+            left: markerPosition.left, // 170 이동
           }}
         />
-        <div className="space-for-nav" style={{ height: "4rem" }}></div>
-        <div className="space-for-nav" style={{ height: "4rem" }}></div>
-        <div className="space-for-nav" style={{ height: "4rem" }}></div>
-        <div className="space-for-nav" style={{ height: "4rem" }}></div>
-        <div className="space-for-nav" style={{ height: "4rem" }}></div>
-        <div className="space-for-nav" style={{ height: "4rem" }}></div>
+        <div className="space-for-nav" style={{ height: "50rem" }}></div>
       </div>
     </Container>
   );

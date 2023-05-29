@@ -81,9 +81,8 @@ function App() {
             path="/Maps"
             element={
               <>
-
-                <Maps />
-                <Footer/>
+              <Maps/>
+              <Footer />
                 
               </>
             }
@@ -112,18 +111,17 @@ function App() {
             </>
           } />
           <Route path="/jpStudy" element={
-          <>
-          <JpStudy/>
-          <Footer/>
-          </>
+            <>
+              <JpStudy />
+              <Footer />
+            </>
           } />
           <Route path="/csquare" element={
-          <>
-          <Csquare/>
-          <Footer/>
-          </>
+            <>
+              <Csquare />
+              <Footer />
+            </>
           } />
-          
         </Routes>
       </Router>
     </div>
