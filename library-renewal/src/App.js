@@ -15,8 +15,16 @@ import NoticeBlog from './screens/NoticeBlog';
 import Mypage from './screens/Mypage';
 import Maps from './screens/Maps';
 import GlobalStyle from './GlobalStyle';
+import { useState } from 'react';
+import ChatWindow from './components/ChatWindow';
 
 function App() {
+  const [showChat, setShowChat] = useState(false);
+
+  const handleChatToggle = () => {
+    setShowChat(!showChat);
+  };
+
   return (
     <div className="App">
       <NavBar />
@@ -24,19 +32,19 @@ function App() {
       <Router>
         <Routes>
 
-         <Route 
-          path="/myloan/*" 
-          element={
-            <>
-          <MyLoanPage />
-            <Footer />
-          </>
+          <Route
+            path="/myloan/*"
+            element={
+              <>
+                <MyLoanPage />
+                <Footer />
+              </>
 
-          }/>
+            } />
           <Route
             path="/studyroom/reserve/*"
             element={<StudyRoomReservePage />}
-          /> 
+          />
           <Route
             path="/"
             element={
@@ -97,6 +105,12 @@ function App() {
           />
         </Routes>
       </Router>
+      <div className="chat-icon" style={{ position: 'fixed', bottom: 30, right: 30 }}>
+        {showChat && <ChatWindow />}
+        <img src="./chaticon.jpeg" alt="Chat Icon"
+             style={{ width: '50px', height: '50px', cursor: 'pointer', position: 'relative' }}
+             onClick={handleChatToggle} />
+      </div>
     </div>
   );
 }

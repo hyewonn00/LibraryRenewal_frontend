@@ -5,8 +5,8 @@
     border-radius: 5px;
     overflow: hidden;
     position: absolute;
-    right: 30px;
-    bottom: 90px;
+    right: 0;
+    bottom: 60px;
 }
 
 .chat-container {
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* 답변을 왼쪽에 정렬 */
-    background: #f9f8f8;
+    background: #e0dddd;
 }
 
 .message-bubble {
@@ -35,16 +35,20 @@
 .user {
     background-color: #f2f2f2;
     align-self: flex-end;
+    color: black;
 }
 
 .bot {
     background-color: #c4def6;
     align-self: flex-start;
+    color: black;
 }
 
 .input-form {
     display: flex;
     border-top: 1px solid gainsboro;
+    background: #fff;
+    color: black;
 }
 
 .input-field {
@@ -62,6 +66,8 @@
     color: #fff;
     font-weight: 700;
     cursor: pointer;
+    width: 90px;
+    font-size: 13px;
 }
 
 

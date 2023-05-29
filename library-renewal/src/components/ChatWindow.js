@@ -21,7 +21,7 @@ function ChatWindow() {
         setMessages([
           ...messages,
           { text: input, sender: 'user' },
-          { text: data.result, sender: 'bot' },
+          { text: data.result, sender: 'bot' }
         ]);
         setInput('');
       } catch (error) {
