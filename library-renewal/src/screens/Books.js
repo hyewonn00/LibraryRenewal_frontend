@@ -80,22 +80,22 @@ const Books = () => {
   useEffect(() => {
     axios.get('http://34.64.215.230:8080/api/books/recent') //최신 도서 조회
       .then(response => {
-        setGetBooksData(response.data);
+        setLimitedBooksData(response.data);
       });
 
     axios.get('http://34.64.215.230:8080/api/books/popular') //인기 도서 조회
       .then(response => {
-        setGetBestData(response.data);
+        setLimitedBestData(response.data);
       });
 
     // const shuffledBooks = shuffle(getBooksData);
     // const shuffledBestBooks = shuffle(getBestData);
 
-    const limitedBooks = getBooksData.slice(0, 5);
-    const limitedBestBooks = getBestData.slice(0, 5);
+    // const limitedBooks = getBooksData.splice(0,5);
+    // const limitedBestBooks = getBestData.splice(0,5);
 
-    setLimitedBooksData(limitedBooks);
-    setLimitedBestData(limitedBestBooks);
+    // setLimitedBooksData(limitedBooks);
+    // setLimitedBestData(limitedBestBooks);
   }, []);
 
   const handleMouseEnter = (index, isBest) => {
@@ -132,63 +132,67 @@ const Books = () => {
 
   return (
     <div className='container'>
-    <div className="space-for-nav" style={{ height: "4rem" }}></div>
-    <div className="space-for-nav" style={{ height: "4rem" }}></div>
-    <Container>
-      <div className='box'>
-        <header className='home-header'>
-          <h1>
-            <span></span> 신착/인기도서 <span></span>
-          </h1>
-        </header>
-        <div className="new">
-          <h5>신착도서</h5>
-          <ul>
-            {
-              limitedBooksData.map((book, index) => (
-              <li
-                className={`book ${hoveredIndex === index ? 'hovered' : ''}`}
-                key={book.id}
-                style={{
-                  backgroundImage: hoveredIndex === index ? 'none' : `url(${book.image})`,
-                  backgroundColor: hoveredIndex === index ? '#394867' : ''
-                }}
-                onMouseEnter={() => handleMouseEnter(index, false)}
-                onMouseLeave={() => handleMouseLeave(false)}
-              >
-                <p>{book.title} - {book.author}</p>
-              </li>
-            ))
-            }
-          </ul>
+      <div className="space-for-nav" style={{ height: "4rem" }}></div>
+      <div className="space-for-nav" style={{ height: "4rem" }}></div>
+      <Container>
+        <div className='box'>
+          <header className='home-header'>
+            <h1>
+              <span></span> 신착/인기도서 <span></span>
+            </h1>
+          </header>
+          <div className="new">
+            <h5>신착도서</h5>
+            <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+            <ul>
+                {
+                  limitedBooksData.map((book) => (
+                    <li
+                      className={`book ${hoveredIndex === book.bno ? 'hovered' : ''}`}
+                      key={book.bno}
+                      style={{
+                        backgroundImage: hoveredIndex === book.bno ? 'none' : `url(${book.image})`,
+                        backgroundColor: hoveredIndex === book.bno ? '#394867' : ''
+                      }}
+                      onMouseEnter={() => handleMouseEnter(book.bno, false)}
+                      onMouseLeave={() => handleMouseLeave(false)}
+                    >
+                      <p>{book.title} - {book.author}</p>
+                    </li>
+                  ))
+                }
+              
+            </ul>
+            </div>
+          </div>
+          <div className="best">
+            <h5>인기도서</h5>
+            <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+            <ul>
+              {limitedBestData.map((book, index) => (
+                <li
+                  className={`book ${hoveredBestIndex === index ? 'hovered' : ''}`}
+                  key={book.id}
+                  style={{
+                    backgroundImage: hoveredBestIndex === index ? 'none' : `url(${book.image})`,
+                    backgroundColor: hoveredBestIndex === index ? '#394867' : ''
+                  }}
+                  onMouseEnter={() => handleMouseEnter(index, true)}
+                  onMouseLeave={() => handleMouseLeave(true)}
+                >
+                  <p>{book.title} - {book.author}</p>
+                </li>
+              ))}
+            </ul>
+            </div>
+          </div>
         </div>
-        <div className="best">
-          <h5>인기도서</h5>
-          <ul>
-            {limitedBestData.map((book, index) => (
-              <li
-                className={`book ${hoveredBestIndex === index ? 'hovered' : ''}`}
-                key={book.id}
-                style={{
-                  backgroundImage: hoveredBestIndex === index ? 'none' : `url(${book.image})`,
-                  backgroundColor: hoveredBestIndex === index ? '#394867' : ''
-                }}
-                onMouseEnter={() => handleMouseEnter(index, true)}
-                onMouseLeave={() => handleMouseLeave(true)}
-              >
-                <p>{book.title} - {book.author}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-      </div>
-    </Container>
-          <div className="space-for-nav" style={{ height: "4rem" }}></div>
-          <div className="space-for-nav" style={{ height: "4rem" }}></div>
-          <div className="space-for-nav" style={{ height: "4rem" }}></div>
-          <div className="space-for-nav" style={{ height: "4rem" }}></div>
-        </div>
+      </Container>
+      <div className="space-for-nav" style={{ height: "4rem" }}></div>
+      <div className="space-for-nav" style={{ height: "4rem" }}></div>
+      <div className="space-for-nav" style={{ height: "4rem" }}></div>
+      <div className="space-for-nav" style={{ height: "4rem" }}></div>
+    </div>
   );
 };
 
