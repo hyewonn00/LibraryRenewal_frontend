@@ -81,7 +81,10 @@ function App() {
             path="/Maps"
             element={
               <>
+
                 <Maps />
+                <Footer/>
+                
               </>
             }
           />
