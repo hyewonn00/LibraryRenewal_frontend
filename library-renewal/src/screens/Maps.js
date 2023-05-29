@@ -101,15 +101,15 @@ function IndexPage() {
     // B1 층의 마커 위치 설정
     switch (id) {
       case 'guidetab2-1':
-        return { top: '195px', left: '680px', display: 'block' };
+        return { top: '475px', left: '850px', display: 'block' };
       case 'guidetab2-2':
-        return { top: '115px', left: '810px', display: 'block' };
+        return { top: '395px', left: '980px', display: 'block' };
       case 'guidetab2-3':
-        return { top: '195px', left: '840px', display: 'block' };
+        return { top: '475px', left: '1010px', display: 'block' };
       case 'guidetab2-4':
-        return { top: '260px', left: '845px', display: 'block' };
+        return { top: '540px', left: '1015px', display: 'block' };
       case 'guidetab2-5':
-        return { top: '375px', left: '830px', display: 'block' };
+        return { top: '655px', left: '1000px', display: 'block' };
       default:
         return { display: 'none' };
     }
@@ -119,21 +119,21 @@ function IndexPage() {
     // 1층의 마커 위치 설정
     switch (id) {
       case 'guidetab2-1':
-        return { top: '80px', left: '670px', display: 'block' };
+        return { top: '360px', left: '840px', display: 'block' };
       case 'guidetab2-2':
-        return { top: '265px', left: '645px', display: 'block' };
+        return { top: '545px', left: '815px', display: 'block' };
       case 'guidetab2-3':
-        return { top: '180px', left: '650px', display: 'block' };
+        return { top: '460px', left: '820px', display: 'block' };
       case 'guidetab2-4':
-        return { top: '400px', left: '650px', display: 'block' };
+        return { top: '680px', left: '820px', display: 'block' };
       case 'guidetab2-5':
-        return { top: '115px', left: '860px', display: 'block' };
+        return { top: '395px', left: '1030px', display: 'block' };
       case 'guidetab2-6':
-        return { top: '160px', left: '830px', display: 'block' };
+        return { top: '430px', left: '1020px', display: 'block' };
       case 'guidetab2-7':
-        return { top: '180px', left: '835px', display: 'block' };
+        return { top: '460px', left: '1025px', display: 'block' };
       case 'guidetab2-8':
-        return { top: '260px', left: '860px', display: 'block' };
+        return { top: '540px', left: '1030px', display: 'block' };
       default:
         return { display: 'none' };
     }
@@ -143,21 +143,21 @@ function IndexPage() {
     // 2층의 마커 위치 설정
     switch (id) {
       case 'guidetab2-1':
-        return { top: '165px', left: '670px', display: 'block' };
+        return { top: '445px', left: '840px', display: 'block' };
       case 'guidetab2-2':
-        return { top: '110px', left: '800px', display: 'block' };
+        return { top: '390px', left: '970px', display: 'block' };
       case 'guidetab2-3':
-        return { top: '230px', left: '780px', display: 'block' };
+        return { top: '510px', left: '950px', display: 'block' };
       case 'guidetab2-4':
-        return { top: '330px', left: '790px', display: 'block' };
+        return { top: '610px', left: '960px', display: 'block' };
       case 'guidetab2-5':
-        return { top: '270px', left: '920px', display: 'block' };
+        return { top: '550px', left: '1093px', display: 'block' };
       case 'guidetab2-6':
-        return { top: '250px', left: '980px', display: 'block' };
+        return { top: '530px', left: '1150px', display: 'block' };
       case 'guidetab2-7':
-        return { top: '400px', left: '845px', display: 'block' };
+        return { top: '675px', left: '982px', display: 'block' };
       case 'guidetab2-8':
-        return { top: '405px', left: '650px', display: 'block' };
+        return { top: '670px', left: '860px', display: 'block' };
       default:
         return { display: 'none' };
     }
@@ -167,11 +167,11 @@ function IndexPage() {
     // 3층의 마커 위치 설정
     switch (id) {
       case 'guidetab2-1':
-        return { top: '125px', left: '720px', display: 'block' };
+        return { top: '405px', left: '890px', display: 'block' };
       case 'guidetab2-2':
-        return { top: '310px', left: '780px', display: 'block' };
+        return { top: '590px', left: '950px', display: 'block' };
       case 'guidetab2-3':
-        return { top: '245px', left: '980px', display: 'block' };
+        return { top: '525px', left: '1150px', display: 'block' };
       default:
         return { display: 'none' };
     }
@@ -181,15 +181,15 @@ function IndexPage() {
     // 4층의 마커 위치 설정
     switch (id) {
       case 'guidetab2-1':
-        return { top: '105px', left: '675px', display: 'block' };
+        return { top: '385px', left: '845px', display: 'block' };
       case 'guidetab2-2':
-        return { top: '105px', left: '815px', display: 'block' };
+        return { top: '385px', left: '985px', display: 'block' };
       case 'guidetab2-3':
-        return { top: '90px', left: '890px', display: 'block' };
+        return { top: '370px', left: '1052px', display: 'block' };
       case 'guidetab2-4':
-        return { top: '230px', left: '670px', display: 'block' };
+        return { top: '510px', left: '830px', display: 'block' };
       case 'guidetab2-5':
-        return { top: '255px', left: '990px', display: 'block' };
+        return { top: '535px', left: '1155px', display: 'block' };
       default:
         return { display: 'none' };
     }
@@ -199,9 +199,9 @@ function IndexPage() {
     // 5층의 마커 위치 설정
     switch (id) {
       case 'guidetab2-1':
-        return { top: '250px', left: '680px', display: 'block' };
+        return { top: '530px', left: '850px', display: 'block' };
       case 'guidetab2-2':
-        return { top: '300px', left: '780px', display: 'block' };
+        return { top: '580px', left: '945px', display: 'block' };
       default:
         return { display: 'none' };
     }
