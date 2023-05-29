@@ -15,8 +15,14 @@ import NoticeBlog from './screens/NoticeBlog';
 import Mypage from './screens/Mypage';
 import Maps from './screens/Maps';
 import GlobalStyle from './GlobalStyle';
+
 import { useState } from 'react';
 import ChatWindow from './components/ChatWindow';
+
+import HallymMuseum from './screens/hallymMuseum';
+import JpStudy from './screens/jpStudy';
+import Csquare from './screens/csquare';
+
 
 function App() {
   const [showChat, setShowChat] = useState(false);
@@ -43,7 +49,13 @@ function App() {
             } />
           <Route
             path="/studyroom/reserve/*"
-            element={<StudyRoomReservePage />}
+
+            element={
+              <>
+                <StudyRoomReservePage />
+                <Footer />
+              </>
+            }
           />
           <Route
             path="/"
@@ -81,8 +93,9 @@ function App() {
             path="/Maps"
             element={
               <>
-                <Maps />
-                <Footer />
+              <Maps/>
+              <Footer />
+                
               </>
             }
           />
@@ -103,6 +116,24 @@ function App() {
               </>
             }
           />
+          <Route path="/hallymMuseum" element={
+            <>
+              <HallymMuseum />
+              <Footer />
+            </>
+          } />
+          <Route path="/jpStudy" element={
+            <>
+              <JpStudy />
+              <Footer />
+            </>
+          } />
+          <Route path="/csquare" element={
+            <>
+              <Csquare />
+              <Footer />
+            </>
+          } />
         </Routes>
       </Router>
       <div className="chat-icon" style={{ position: 'fixed', bottom: 30, right: 30 }}>
