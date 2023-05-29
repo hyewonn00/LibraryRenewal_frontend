@@ -50,6 +50,10 @@ const Container = styled.div`
 }
 `;
 
+const Title = styled.h1`
+  text-align: center;
+`;
+
 function IndexPage() {
   const [selectedTab, setSelectedTab] = useState('1F');
   const [markerPosition, setMarkerPosition] = useState({ top: 0, left: 0, display: 'none' });
@@ -207,7 +211,8 @@ function IndexPage() {
     <Container>
       <div className='container'>
         <div className="guide">
-          <div className="space-for-nav" style={{ height: "4rem" }}></div>
+          <div className="space-for-nav" style={{ height: "10rem" }}></div>
+          <Title>도서관 안내도</Title>
           <div className="space-for-nav" style={{ height: "4rem" }}></div>
           <div className="guideTab1" style={{ float: 'left' }}>
             <ul>

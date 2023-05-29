@@ -72,8 +72,8 @@ p{
 const Books = () => {
   const [limitedBooksData, setLimitedBooksData] = useState([]);
   const [limitedBestData, setLimitedBestData] = useState([]);
-  const [getBooksData, setGetBooksData] = useState([]);
-  const [getBestData, setGetBestData] = useState([]);
+  // const [getBooksData, setGetBooksData] = useState([]);
+  // const [getBestData, setGetBestData] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(-1);
   const [hoveredBestIndex, setHoveredBestIndex] = useState(-1);
 
