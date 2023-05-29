@@ -15,6 +15,9 @@ import NoticeBlog from './screens/NoticeBlog';
 import Mypage from './screens/Mypage';
 import Maps from './screens/Maps';
 import GlobalStyle from './GlobalStyle';
+import HallymMuseum from './screens/hallymMuseum';
+import JpStudy from './screens/jpStudy';
+import Csquare from './screens/csquare';
 
 function App() {
   return (
@@ -24,19 +27,24 @@ function App() {
       <Router>
         <Routes>
 
-         <Route 
-          path="/myloan/*" 
-          element={
-            <>
-          <MyLoanPage />
-            <Footer />
-          </>
+          <Route
+            path="/myloan/*"
+            element={
+              <>
+                <MyLoanPage />
+                <Footer />
+              </>
 
-          }/>
+            } />
           <Route
             path="/studyroom/reserve/*"
-            element={<StudyRoomReservePage />}
-          /> 
+            element={
+              <>
+                <StudyRoomReservePage />
+                <Footer />
+              </>
+            }
+          />
           <Route
             path="/"
             element={
@@ -73,8 +81,9 @@ function App() {
             path="/Maps"
             element={
               <>
-                <Maps />
-                <Footer />
+              <Maps/>
+              <Footer />
+                
               </>
             }
           />
@@ -95,6 +104,24 @@ function App() {
               </>
             }
           />
+          <Route path="/hallymMuseum" element={
+            <>
+              <HallymMuseum />
+              <Footer />
+            </>
+          } />
+          <Route path="/jpStudy" element={
+            <>
+              <JpStudy />
+              <Footer />
+            </>
+          } />
+          <Route path="/csquare" element={
+            <>
+              <Csquare />
+              <Footer />
+            </>
+          } />
         </Routes>
       </Router>
     </div>
